@@ -8,7 +8,7 @@ import DatabaseInternalsController from "./app/controllers/DatabaseInternalsCont
 
 async function bootstrap() {
   const app = new Koa();
-  const port = process.env.port || 8080;
+  const port = process.env.PORT || 8080;
   app.use(asMiddleware(DatabaseInternalsController));
   app.listen(port);
   console.log("Listening on port %d", port);
