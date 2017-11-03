@@ -6,10 +6,25 @@
   "author": "Sami Kukkonen <sami@samikukkonen.fi>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node dist/index.js"
+  },
   "dependencies": {
+    "@types/koa": "^2.0.39",
+    "@types/koa-compose": "^3.2.2",
+    "@types/koa-mount": "^2.0.18",
+    "@types/koa-router": "^7.0.23",
+    "@types/node": "^8.0.47",
+    "koa": "^2.3.0",
+    "koa-compose": "^4.0.0",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.2.1",
+    "reflect-metadata": "^0.1.10",
+    "ts-node": "^3.3.0",
     "typescript": "^2.6.1"
   },
   "devDependencies": {
-    "tslint": "^5.8.0"
+    "tslint": "^5.8.0",
+    "tslint-config-prettier": "^1.6.0"
   }
 }
