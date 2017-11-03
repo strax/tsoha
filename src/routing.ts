@@ -37,10 +37,10 @@ const prefixFor = (constructor: IConstructor) =>
   Reflect.getOwnMetadata(MetadataKeys.Prefix, constructor) as string | undefined;
 
 function bindHandler(constructor: IConstructor, handler: Middleware): Middleware {
-  return ctx => {
+  return async ctx => {
     // Create a new controller instance for each request
     const instance = new constructor();
-    handler.call(instance, ctx);
+    await handler.call(instance, ctx);
   };
 }
 
