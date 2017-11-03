@@ -1,0 +1,15 @@
+{
+  "name": "tsoha",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "repository": "git@github.com:strax/tsoha.git",
+  "author": "Sami Kukkonen <sami@samikukkonen.fi>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "typescript": "^2.6.1"
+  },
+  "devDependencies": {
+    "tslint": "^5.8.0"
+  }
+}

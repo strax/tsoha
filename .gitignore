@@ -4,3 +4,5 @@ doc/*.fls
 doc/*.synctex.gz
 doc/*.log
 doc/*.out
+dist
+node_modules
