@@ -1,10 +1,11 @@
-import { Route, GET } from "../../routing";
+import { Route, GET, POST } from "../../routing";
 import { Context } from "koa";
 import database from "../../database";
 
 @Route("/database-internals")
 export default class DatabaseInternalsController {
-  @GET("/")
+  @GET()
+  @POST()
   public async index(ctx: Context) {
     try {
       const connection = await database.connect();

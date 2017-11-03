@@ -51,7 +51,9 @@ export function asMiddleware(constructor: IConstructor): Middleware {
     router.prefix(prefix);
   }
   const routes = routesFor(constructor);
+  console.log("Registered routes:");
   for (const route of routes) {
+    console.log("\t%s\t%s%s -> %s.%s", route.method, prefix || "", route.prefix, constructor.name, route.handler.name);
     router.register(route.prefix, [route.method], bindHandler(constructor, route.handler));
   }
   return router.routes();
@@ -71,7 +73,6 @@ export function routeHandler(method: HttpMethod, prefix = "/") {
       [...routesFor(prototype.constructor as IConstructor), route],
       prototype.constructor
     );
-    console.log("Registered route %s %s -> %s.%s", method, prefix, prototype.constructor.name, methodName);
   };
 }
 

@@ -8,7 +8,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictFunctionTypes": false,
-    "sourceMap": true
+    "inlineSourceMap": true
   },
   "include": ["src/**/*"]
 }
