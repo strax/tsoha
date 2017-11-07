@@ -40,7 +40,7 @@ function bindHandler(constructor: IConstructor, handler: Middleware): Middleware
   return async ctx => {
     // Create a new controller instance for each request
     const instance = new constructor();
-    await handler.call(instance, ctx);
+    return await handler.call(instance, ctx);
   };
 }
 
