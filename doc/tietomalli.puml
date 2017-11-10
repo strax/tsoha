@@ -1,0 +1,16 @@
+@startuml
+object "Käyttäjä" as user
+object "Liike" as exercise
+object "Harjoituskerta" as workout
+object "Harjoituspohja" as template
+object "Suoritus" as set
+
+user "1" --- "n" exercise
+user "1" --- "n" workout
+user "1" --- "n" template
+
+exercise "1" o-- "1" set
+workout --|> template
+workout "1" *-- "n" set
+template "1" *-- "n" set
+@enduml

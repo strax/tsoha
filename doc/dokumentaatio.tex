@@ -2,6 +2,8 @@
   \usepackage[utf8]{inputenc}
   \usepackage{graphicx}
   \usepackage{hyperref}
+  \usepackage{tabulary}
+  \usepackage{tabu}
   \usepackage[finnish]{babel}
   \graphicspath{{./}}
   \newcommand{\code}[1]{\texttt{#1}}
@@ -43,4 +45,67 @@ Käyttäjäryhmien ja -tapausten suhdetta toisiinsa on havainnollistettu kuvassa
   \caption{Järjestelmän käyttötapauskaavio}
   \label{fig:usecases}
 \end{figure}
+\pagebreak
+\section{Järjestelmän tietomalli}
+Järjestelmän tietokohteiden väliseet suhteet on kuvattu seuraavassa käsitekaaviossa:
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\textwidth]{tietomalli.eps}
+  \caption{Käsitekaavio järjestelmän tiedosta}
+\end{figure}
+\\
+\subsection{Tietokohteiden yksityiskohtaiset määrittelyt}
+\subsubsection{Käyttäjä}
+\begin{tabu} to\textwidth { | X[1,L] | X[1,L] | X[2,L] | }
+  \hline
+    \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\
+  \hline
+    Nimi & Merkkijono, max. 256 merkkiä & \\
+  \hline
+    Sähköpostiosoite & Merkkijono, max. 256 merkkiä & \\
+  \hline
+    Salasana & Merkkijono & \\
+  \hline
+\end{tabu}
+
+\subsubsection{Harjoituskerta}
+\begin{tabu} to\textwidth { | X[1,L] | X[1,L] | X[2,L] | }
+  \hline
+    \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\
+  \hline
+     Aloitusaika & Aika- ja päivämäärä & \\
+  \hline
+     Lopetusaika & Aika- ja päivämäärä & \\
+  \hline
+\end{tabu}
+
+\subsubsection{Harjoituspohja}
+\begin{tabu} to\textwidth { | X[1,L] | X[1,L] | X[2,L] | }
+  \hline
+    \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\
+  \hline
+    Nimi & Merkkijono & Harjoituspohjan uniikki (käyttäjän kontekstissa) nimi \\
+  \hline
+\end{tabu}
+
+\subsubsection{Suoritus}
+\begin{tabu} to\textwidth { | X[1,L] | X[1,L] | X[2,L] | }
+  \hline
+    \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\
+  \hline
+    Paino & Positiivinen kokonaisluku (kg) & Harjoituksessa käytetyt painot. Vapaaehtoinen kenttä. \\ 
+  \hline
+    Määrä & Positiivinen kokonaisluku & Toistojen määrä \\
+  \hline
+\end{tabu}
+
+\subsubsection{Liike}
+\begin{tabu} to\textwidth { | X[1,L] | X[1,L] | X[2,L] | }
+  \hline
+    \textbf{Attribuutti} & \textbf{Arvojoukko} & \textbf{Kuvailu} \\
+  \hline
+    Nimi & Merkkijono & \\
+  \hline
+\end{tabu}
+
 \end{document}
